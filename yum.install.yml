@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  connection: linux-project
+  connection: all
   gather_facts: yes
 
   tasks:
