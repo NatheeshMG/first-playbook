@@ -1,5 +1,5 @@
 ---
-- hosts: project-1
+- hosts: all
   connection: ssh
   gather_facts: yes
 
