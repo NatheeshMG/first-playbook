@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  connection: all
+  connection: ssh
   gather_facts: yes
 
   tasks:
