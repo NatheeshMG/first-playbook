@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  connection: devservers
+  connection: linux-servers
   gather_facts: yes
 
   tasks:
