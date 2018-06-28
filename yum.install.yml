@@ -5,4 +5,4 @@
 
   tasks:
     - name: install vim
-      yum: pkg=vim state=installed update_cache=true
+      yum: pkg=vim state=removed update_cache=true
