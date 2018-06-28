@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: testing-ansible
   connection: ssh
   gather_facts: yes
 
