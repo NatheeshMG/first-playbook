@@ -6,7 +6,7 @@
   
   tasks: 
     - name: remove packages
-       yum: pkg={{items} state=absent update_cache
+       yum: pkg={{item} state=absent update_cache=true
        with_items:
           - sysstat
           - sendmail
