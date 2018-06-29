@@ -1,17 +1,14 @@
 ---
-- hosts: 2nd-group
+- hosts:  2nd-group
   connection: ssh
   gather_facts: yes
-  
-  
-  tasks: 
-    - name: remove packages
-       yum: pkg={{item} state=absent update_cache=true
-       with_items:
-          - sysstat
-          - sendmail
-          - vim
-          - nfs
-          - ntp
-          
- 
+
+  tasks:
+    - name: remove package using yum
+      yum: pkg={{item}} state=removed update_cache=true
+      with_items: 
+        - sendmail
+        - wget
+        - ntp
+        - nfs-utils
+        
