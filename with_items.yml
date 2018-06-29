@@ -4,8 +4,8 @@
   gather_facts: yes
 
   tasks:
-    - name: remove package using yum
-      yum: pkg={{item}} state=removed update_cache=true
+    - name: install package using yum
+      yum: pkg={{item}} state=installed update_cache=true
       with_items: 
         - sendmail
         - wget
