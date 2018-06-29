@@ -1,0 +1,17 @@
+---
+- hosts: 2nd-group
+  connection: ssh
+  gather_facts: yes
+  
+  
+  tasks: 
+    - name: remove packages
+       yum: pkg={{items} state=absent update_cache
+       with_items:
+          - sysstat
+          - sendmail
+          - vim
+          - nfs
+          - ntp
+          
+ 
