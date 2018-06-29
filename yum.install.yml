@@ -4,5 +4,5 @@
   gather_facts: yes
 
   tasks:
-    - name: install systat
-      yum: pkg=vim state=installed update_cache=true
+    - name: remove
+      yum: pkg=vim state=absent update_cache=true
