@@ -1,5 +1,5 @@
- ---
- - hosts:  2nd-group
+---
+- hosts: 2nd-group
   connection: ssh
   gather_facts: yes
 
