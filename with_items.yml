@@ -4,40 +4,11 @@
   gather_facts: yes
 
   tasks:
-    - name: install package using yum
-      yum: pkg={{item}} state=installed update_cache=true
+    - name: remove package using yum
+      yum: pkg={{item}} state=absent update_cache=true
       with_items: 
         - sendmail
         - wget
         - ntp
         - nfs-utils
-        
-    - name: Enable sendmail service
-      systemd: 
-         name: sendmail
-         enabled: yes
-         
-    - name: start sendmail service
-      systemd: 
-         name: sendmail
-         state: started
-         
-    - name: Enable ntp service
-      systemd:
-         name: ntpd
-         enabled: yes
-         
-    - name: start ntp service
-      systemd:
-         name: ntpd
-         state: started
-         
-    - name: Enable nfs service
-      systemd:
-         name: rpcbind
-         enabled: yes
-         
-    - name: start nfs service
-      systemd:
-         name: rpcbind
-         state: started
+
